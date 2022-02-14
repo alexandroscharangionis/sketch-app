@@ -1,16 +1,28 @@
 const grid = document.querySelector("#main");
 
-function createSquares(numSquares) {
-  grid.style.gridTemplateColumns = `repeat(${numSquares}, 1fr)`;
-  for (let i = 0; i < numSquares * numSquares; i++) {
+function createSquares() {
+  grid.innerHTML = "";
+  let input = document.getElementById("userInput").value;
+  grid.style.gridTemplateColumns = `repeat(${input}, 1fr)`;
+  for (let i = 0; i < input * input; i++) {
     const square = document.createElement("div");
     square.className = "square";
-    let calculateWidth = 60 / numSquares;
-    let calculateHeight = 60 / numSquares;
+    let calculateWidth = 60 / input;
+    let calculateHeight = 60 / input;
     square.style.width = `${calculateWidth}rem`;
     square.style.height = `${calculateHeight}rem`;
     grid.appendChild(square);
   }
 }
 
-createSquares(4);
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", createSquares);
+
+let input = document.getElementById("userInput");
+input.addEventListener("keyup", (e) => {
+  e.preventDefault();
+  if (e.key === "Enter") {
+    btn.click();
+  }
+});
