@@ -12,11 +12,13 @@ body {
   font-size: 1.6rem;
 }
 
-.main-container {
-  background-color: aqua;
+.grid {
+  background-color: antiquewhite;
+  display: grid;
+  gap: 3rem;
 }
 
 .single-square {
   height: 10px;
-  background-color: red;
+  background-color: green;
 }
