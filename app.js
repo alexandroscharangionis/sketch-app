@@ -1,6 +1,16 @@
-for (let i = 0; i < 1024; i++) {
-  let squareDiv = document.createElement("div");
-  squareDiv.className = "single-square";
-  let mainDiv = document.getElementById("main");
-  mainDiv.appendChild(squareDiv);
+const grid = document.querySelector("#main");
+
+function createSquares(numSquares) {
+  grid.style.gridTemplateColumns = `repeat(${numSquares}, 1fr)`;
+  for (let i = 0; i < numSquares * numSquares; i++) {
+    const square = document.createElement("div");
+    square.className = "square";
+    let calculateWidth = 60 / numSquares;
+    let calculateHeight = 60 / numSquares;
+    square.style.width = `${calculateWidth}rem`;
+    square.style.height = `${calculateHeight}rem`;
+    grid.appendChild(square);
+  }
 }
+
+createSquares(4);
