@@ -14,18 +14,19 @@ body {
   height: 60rem;
   margin: 0 auto;
   margin-top: 10rem;
-  background-color: rgb(241, 218, 7);
+  /* background-color: rgb(241, 218, 7); */
+  background-color: #ffe8f7;
 }
 
 .grid {
-  background-color: antiquewhite;
+  background-color: #fff;
   display: grid;
 }
 
 .square {
   border: 0.08rem solid #000;
+}
 
-  /* height: 2rem;
-  width: 2rem; */
-  /* background-color: green; */
+.flex {
+  margin-bottom: 2rem;
 }
