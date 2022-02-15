@@ -10,17 +10,32 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
   width: 60rem;
-  height: 60rem;
+  /* height: 80rem; */
   margin: 0 auto;
   margin-top: 10rem;
   /* background-color: rgb(241, 218, 7); */
   background-color: #ffe8f7;
 }
 
+.heading-main {
+  font-size: 3rem;
+  margin-top: -6rem;
+}
+
+.first-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .grid {
   background-color: #fff;
   display: grid;
+  margin-bottom: 5rem;
 }
 
 .square {
@@ -29,4 +44,6 @@ body {
 
 .input {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
