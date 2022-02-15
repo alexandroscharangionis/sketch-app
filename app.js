@@ -1,10 +1,12 @@
 const grid = document.querySelector("#main");
 
 function createSquares() {
+  let warningPara = document.getElementById("warningPara");
+  warningPara.textContent = "";
   grid.innerHTML = "";
   let input = Number(document.getElementById("userInput").value);
   if (input > 100 || input < 0) {
-    console.log("no");
+    warningPara.textContent = `${input} is an invalid number. Please choose from 1 to 100.`;
     return;
   }
 

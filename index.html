@@ -10,14 +10,16 @@
   <body>
     <h2 class="heading-main">HOW IT WORKS</h2>
     <p class="guide-para">
-      Create your canvas grid by choosing a number between 0 and 100.
+      Create your canvas by choosing how many squares per side you wish to have.
     </p>
-    <p class="guide-para">Sketch something by hovering over the squares.</p>
+    <p class="guide-para">Please choose a number from 1 to 100.</p>
+    <p class="guide-para">Sketch by hovering over the squares.</p>
     <div class="input">
       <label>
         <input id="userInput" type="text" placeholder="Type..." />
         <button id="btn">Generate grid</button>
       </label>
+      <p class="warning" id="warningPara"></p>
     </div>
     <div id="main" class="grid"></div>
     <script type="text/javascript" src="app.js"></script>
